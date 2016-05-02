@@ -45,7 +45,7 @@
 	
 	String nome = "root";
 	String senha = "root";
-	conexao.conecte("jdbc:mysql://localhost/controlededoaçoes", nome, senha);
+	conexao.conecte("jdbc:mysql://localhost/controlededoaÃ§oes", nome, senha);
 
 		if(conexao.estaConectado()){
 			
@@ -58,6 +58,7 @@
 
 
 <%} %>
+		</div>
 	</div>
 </div>
 <div id="copyright">
