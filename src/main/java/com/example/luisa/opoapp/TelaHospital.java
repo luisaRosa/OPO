@@ -12,7 +12,7 @@ import android.widget.Spinner;
 public class TelaHospital extends AppCompatActivity {
 
 
-    private String[] Hospitais = {"HUERB", "Hospital das Clínicas", "Hospital Santa Juliana", "SASMC"};
+    private String[] Hospitais = {"HUERB", "Hospital das Clinicas", "Hospital Santa Juliana", "SASMC"};
 
 
 

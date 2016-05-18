@@ -89,7 +89,7 @@ public class TelaFormulario extends Activity {
 
 
 
-                mailService = new MailService(hospital, nome, idade, ao,mrv,mrm,sias, dias, pupilas,rbsedado, informacoesAdd );
+                mailService = new MailService(hospital, nome, idade, ao,mrv,mrm, sias,dias,  pupilas,rbsedado, informacoesAdd );
 
                // mailService.sendEmail();
                 try {

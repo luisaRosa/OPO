@@ -29,8 +29,8 @@ public class MailService {
     String mensagem;
     AddFile addFile ;
 
-    public MailService(String hospital, String nome, String idade, String Ao, String Mrv, String Mrm, String
-            sias, String dias, String pupilas,String rbsedado, String informacoesAdd){
+    public MailService(String hospital, String nome, String idade, String Ao, String Mrv, String Mrm, String sias
+            , String dias, String pupilas,String rbsedado, String informacoesAdd){
 
 
         mensagem =  "Central de Trasplantes Help Center:\n\n " +
@@ -44,13 +44,13 @@ public class MailService {
                 "  AO: "+Ao+"\n\n" +
                 "  MRV: "+Mrv+" \n\n" +
                 "  MRM: "+ Mrm+"\n\n" +
-                "Pressão Arterial: "+dias+"/"+ sias+" \n\n" +
+                "Pressão Arterial: "+sias+"/"+ dias+" \n\n" +
                 "Sedado: "+ rbsedado+"\n\n" +
                 "Informações Adicionais: \n" +
                 "   "+informacoesAdd +
                 "";
                 String dados = nome +";"+idade +";"+hospital +";"+pupilas
-                        +";"+Ao +";"+Mrv +";"+Mrm +";"+sias +";"+dias+";"
+                        +";"+Ao +";"+Mrv +";"+Mrm +";"+ sias+";"+dias+";"
                         +rbsedado +";"+informacoesAdd;
                 addFile = new AddFile();
                addFile.writeFile(dados);
