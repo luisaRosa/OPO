@@ -1,0 +1,10 @@
+Luisa;
+20;
+Hospital das Clínicas;
+normais;
+1;
+2;
+3;
+120/80;
+sim;
+informações;
