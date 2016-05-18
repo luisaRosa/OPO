@@ -1,42 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.luisa.opoapp">
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-        <application
+    <application
         android:allowBackup="true"
         android:icon="@drawable/iconesemfundo"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        >
-    >
+        android:theme="@style/AppTheme">
 
-            <activity android:name=".TelaInicial">
-                <intent-filter>
-                    <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".TelaInicial">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                    <category android:name="android.intent.category.LAUNCHER" />
-                </intent-filter>
-            </activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
-            <activity android:name=".OPOAppp">
-                    <intent-filter>
-                        <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".TelaHospital">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                    </intent-filter>
-                </activity>
+            </intent-filter>
+        </activity>
 
 
-            <activity android:name=".TelaFormulario">
-                <intent-filter>
-                    <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".TelaFormulario">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                 </intent-filter>
+            </intent-filter>
 
-            </activity>
-</application>
+        </activity>
+
+
+    </application>
 
 </manifest>

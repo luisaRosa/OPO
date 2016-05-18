@@ -1,6 +1,5 @@
 package com.example.luisa.opoapp;
 
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,17 +9,16 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
-import android.widget.Spinner;
 import android.widget.Toast;
-import javax.mail.MessagingException;
 
 /**
- * Created by Luisa on 21/04/2016.
+ * Created by Luisa on 01/05/2016.
  */
 public class TelaFormulario extends Activity {
 
     MailService mailService;
-    String hospital, nome,idade, pupilas,ao,mrv, mrm, pressaoArterial, informacoesAdd, rbsedado;
+    String hospital, nome,idade, pupilas,ao,mrv, mrm, sias, dias, informacoesAdd, rbsedado;
+
 
 
 
@@ -30,7 +28,7 @@ public class TelaFormulario extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tela_formulario);
+        setContentView(R.layout.activity_formulario);
 
         Intent intent = getIntent();
         Bundle bundle = new Bundle();
@@ -41,7 +39,8 @@ public class TelaFormulario extends Activity {
         final  EditText tfxAo = (EditText)findViewById(R.id.txfAo);
         final  EditText tfxMrv = (EditText)findViewById(R.id.txfMRV);
         final  EditText tfxMrm = (EditText)findViewById(R.id.txfMRM);
-        final  EditText tfxpressaoArterial = (EditText)findViewById(R.id.txfPressaoArterial);
+        final  EditText tfxDiastolica = (EditText)findViewById(R.id.diastolica);
+        final  EditText tfxSistolica = (EditText)findViewById(R.id.sistolica);
         final  EditText txfInfomacoesAdd = (EditText) findViewById(R.id.txfInformacoesAdd);
 
         hospital = bundle.getString("hospital").toString();
@@ -58,14 +57,21 @@ public class TelaFormulario extends Activity {
 
 
                 nome = tfxNome.getText().toString();
-                pupilas = tfxPupilas.getText().toString();
+
                 idade = tfxIdade.getText().toString();
-                ao = tfxAo.getText().toString();
-                mrm = tfxMrm.getText().toString();
-                mrv = tfxMrv.getText().toString();
-                pressaoArterial = tfxpressaoArterial.getText().toString();
+
                 pupilas = tfxPupilas.getText().toString();
-                informacoesAdd = txfInfomacoesAdd.getText().toString();
+
+                ao = tfxAo.getText().toString();
+
+                mrm = tfxMrm.getText().toString();
+
+                mrv = tfxMrv.getText().toString();
+
+               sias = tfxSistolica.getText().toString();
+               dias = tfxDiastolica.getText().toString();
+
+
 
                 RadioGroup rg = (RadioGroup) findViewById(R.id.rgSedado);
                 int sedado = rg.getCheckedRadioButtonId();
@@ -76,13 +82,26 @@ public class TelaFormulario extends Activity {
 
 
 
+                informacoesAdd = txfInfomacoesAdd.getText().toString();
 
 
-                mailService = new MailService(hospital, nome, idade, ao,mrv,mrm,pressaoArterial, pupilas,rbsedado, informacoesAdd );
 
-                mailService.sendEmail();
-                Toast toast = Toast.makeText(getApplication(),"Dados enviados", Toast.LENGTH_LONG);
-                toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL, 0, 0); toast.show();
+
+
+
+                mailService = new MailService(hospital, nome, idade, ao,mrv,mrm,sias, dias, pupilas,rbsedado, informacoesAdd );
+
+               // mailService.sendEmail();
+                try {
+                    mailService.enviarEmailImap();
+                    Toast toast = Toast.makeText(getApplication(),"Dados enviados", Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL, 0, 0); toast.show();
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+
             }
         });
     }

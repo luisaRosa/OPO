@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 
 /**
- * Created by Luisa on 22/04/2016.
+ * Created by Luisa on 01/05/2016.
  */
 public class TelaInicial  extends AppCompatActivity implements Runnable{
 
@@ -22,7 +22,7 @@ public class TelaInicial  extends AppCompatActivity implements Runnable{
 
     @Override
     public void run() {
-        startActivity(new Intent(this, OPOAppp.class));
+        startActivity(new Intent(this, TelaHospital.class));
         finish();
     }
 }
