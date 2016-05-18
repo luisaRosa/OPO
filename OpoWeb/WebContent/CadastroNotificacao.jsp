@@ -257,15 +257,17 @@
 								<%		
 										List<Hospital>hospitais = hospitalLogic.getHospitais();
 										for(Hospital hospital1 : hospitais){
-											System.out.println(" id hospital = "+hospital1.getId());
+											
 											if(a != null && hospital1.getHospitalNotificador().equalsIgnoreCase(dad[2])){
+												
+												System.out.println(" id hospital = "+hospital1.getId());
 												
 								%>
 												<option value="<%=hospital1.getId() %>" selected = "selected"> <%=hospital1.getHospitalNotificador() %></option>
 								<%		
 											}else{
 								%>
-												<option value="<%=hospital.getId() %>"> <%=hospital1.getHospitalNotificador()%></option>
+												<option value="<%=hospital1.getId() %>"> <%=hospital1.getHospitalNotificador()%></option>
 								
 								<%
 										}
