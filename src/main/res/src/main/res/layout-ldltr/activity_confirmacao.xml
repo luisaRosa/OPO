@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:nestedScrollingEnabled="false">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".MainSplash"
+        android:background="#0000">
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layoutGeral"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:weightSum="1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/layoutTopo">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/logoOPO"
+                android:src="@drawable/logom"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="OPO App"
+                android:id="@+id/nomeApp"
+                android:textColor="#000000"
+                android:textSize="35dp"
+                android:layout_gravity="center"
+                android:paddingLeft="50dp" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Registrando Notificação"
+            android:id="@+id/txtregistro"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginTop="80dp"
+            android:textColor="#000000"
+            android:textSize="29dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Confirmando dados"
+            android:id="@+id/txtconfirmacao"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginTop="130dp"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textAlignment="center" />
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:inputType="textPersonName"
+            android:fontFamily="serif"
+            android:ems="10"
+            android:id="@+id/txtNome"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="330dp"
+            android:layout_alignParentEnd="true"
+            android:hint="Nome"
+            android:background="#FFFCEEEE"
+            android:layout_marginBottom="15dp"
+            android:textColor="#000000"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <EditText
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:inputType="number"
+            android:fontFamily="serif"
+            android:ems="10"
+            android:id="@+id/txtIdade"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/txtNome"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:hint="Idade"
+            android:background="#FFFCEEEE"
+            android:textColor="#000000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Quadro Clínico"
+            android:textColor="#800000"
+            android:textStyle="bold"
+            android:id="@+id/lblQuadroClinico"
+            android:layout_below="@+id/txtIdade"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="25dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:inputType="text"
+            android:fontFamily="serif"
+            android:ems="10"
+            android:id="@+id/txfPupilas"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/lblQuadroClinico"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:background="#FFFCEEEE"
+            android:hint="Pupilas"
+            android:textColor="#000000"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Unidade de saúde"
+            android:textColor="#800000"
+            android:textStyle="bold"
+            android:id="@+id/lblUnidade"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="25dp"
+            android:layout_marginTop="185dp"
+            android:layout_marginBottom="15dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:inputType="textPersonName"
+            android:fontFamily="serif"
+            android:ems="10"
+            android:id="@+id/txtunidade"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="230dp"
+            android:layout_alignParentEnd="true"
+            android:hint="Unidade de saúde"
+            android:background="#FFFCEEEE"
+            android:layout_marginBottom="15dp"
+            android:textColor="#000000"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Dados Pessoais"
+            android:textColor="#800000"
+            android:textStyle="bold"
+            android:id="@+id/lblDadosPessoais"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="25dp"
+            android:layout_marginTop="290dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Escala de Glasgow: "
+            android:id="@+id/lblGlasgow"
+            android:layout_below="@+id/txfPupilas"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="30dp"
+            android:textColor="#000000" />
+
+        <EditText
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:background="#FFFCEEEE"
+            android:inputType="number"
+            android:hint="AO"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:fontFamily="serif"
+            android:id="@+id/txfAo"
+            android:layout_below="@+id/lblGlasgow"
+            android:layout_alignEnd="@+id/lblDadosPessoais"
+            android:textColor="#000000"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+
+        <EditText
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:background="#FFFCEEEE"
+            android:hint="MRV"
+            android:inputType="number"
+            android:fontFamily="serif"
+            android:id="@+id/txfMRV"
+            android:layout_marginTop="31dp"
+            android:layout_below="@+id/txfAo"
+            android:layout_alignStart="@+id/txfAo"
+            android:textColor="#000000"
+            android:layout_alignEnd="@+id/txfAo" />
+
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:inputType="number"
+            android:fontFamily="serif"
+            android:background="#FFFCEEEE"
+            android:hint="MRM"
+            android:id="@+id/txfMRM"
+            android:layout_below="@+id/txfMRV"
+            android:layout_alignStart="@+id/txfMRV"
+            android:layout_marginTop="30dp"
+            android:textColor="#000000"
+            android:layout_alignEnd="@+id/txfMRV"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:inputType="number|text"
+            android:fontFamily="serif"
+            android:ems="10"
+            android:id="@+id/diastolica"
+            android:background="#FFFCEEEE"
+            android:textColor="#000000"
+            android:layout_below="@+id/txfMRM"
+            android:layout_toEndOf="@+id/txfMRM"
+            android:layout_marginTop="20dp"
+            android:hint="80"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Sedado:"
+            android:fontFamily="serif"
+            android:id="@+id/lblSedado"
+            android:layout_below="@+id/diastolica"
+            android:layout_marginTop="30dp"
+            android:layout_alignEnd="@+id/diastolica"
+            android:layout_alignParentStart="true"
+            android:textColor="#000000" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Informações Adicionais"
+            android:textColor="#800000"
+            android:textStyle="bold"
+            android:id="@+id/lblInformacoesAdd"
+            android:layout_below="@+id/lblSedado"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:textSize="25dp"
+            android:layout_marginBottom="15dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/txfInformacoesAdd"
+            android:layout_below="@+id/lblInformacoesAdd"
+            android:layout_alignParentStart="true"
+            android:background="#FFFCEEEE"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirmar"
+            android:id="@+id/btnEnviar"
+            android:layout_below="@+id/txfInformacoesAdd"
+            android:layout_marginTop="20dp"
+            android:background="#800000"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="15dp"
+            android:textSize="20dp"
+            android:layout_alignEnd="@+id/txfInformacoesAdd"
+            android:layout_alignParentEnd="false" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+
+
+
+        </LinearLayout>
+
+
+
+
+            <EditText
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:hint="Sim / Não"
+                android:id="@+id/txtSedado"
+                android:textColor="#000000"
+                android:layout_weight="0.20"
+                android:layout_alignTop="@+id/lblSedado"
+                android:layout_alignStart="@+id/lblQuadroClinico"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:background="#FFFCEEEE" />
+
+
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:inputType="number|text"
+            android:fontFamily="serif"
+            android:ems="10"
+            android:id="@+id/sistolica"
+            android:background="#FFFCEEEE"
+            android:textColor="#000000"
+            android:layout_alignBottom="@+id/diastolica"
+            android:layout_toEndOf="@+id/lblGlasgow"
+            android:hint="120"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Pressão Arterial:"
+            android:id="@+id/pressaoArterial"
+            android:textColor="#000000"
+            android:layout_above="@+id/lblSedado"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="/"
+            android:id="@+id/divisor"
+            android:layout_alignTop="@+id/diastolica"
+            android:layout_above="@+id/lblSedado"
+            android:textSize="30dp"
+            android:layout_alignStart="@+id/txfMRM"
+            android:layout_alignEnd="@+id/lblQuadroClinico"
+            android:textAlignment="center" /><![CDATA[
+        TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/txfAo"
+            android:layout_alignTop="@+id/lblAo"
+            android:layout_toEndOf="@+id/lblMRV" />
+    ]]>
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Passo 3/3"
+            android:id="@+id/passo"
+            android:textColor="#000000"
+            android:textSize="12dp"
+            android:layout_gravity="center"
+            android:paddingLeft="50dp"
+            android:textAlignment="inherit"
+            android:layout_weight="0.34"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+</ScrollView>

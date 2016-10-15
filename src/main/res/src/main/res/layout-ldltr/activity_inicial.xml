@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:nestedScrollingEnabled="false">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".MainSplash"
+        android:background="@drawable/bg"
+
+
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layoutGeral"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"></LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/layoutTopo">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/logoOPO"
+                    android:src="@drawable/logom"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="OPO App"
+                    android:id="@+id/nomeApp"
+                    android:textColor="#000000"
+                    android:textSize="35dp"
+                    android:layout_gravity="center"
+                    android:paddingLeft="50dp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Registrando Notificação"
+                android:id="@+id/txtregistro"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginTop="30dp"
+                android:textColor="#000000"
+                android:textSize="29dp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Selecione a Unidade de Saúde"
+                android:id="@+id/txtLocal"
+                android:textStyle="bold"
+                android:layout_marginTop="50dp"
+                android:textColor="#800000"
+                android:textSize="22dp"
+                android:textAlignment="center"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:id="@+id/layoutLista">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:id="@+id/listaHospitais"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.03"
+                    android:layout_marginTop="20dp"
+                    android:transitionGroup="false"
+                    android:layout_marginBottom="30dp" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Dados Pessoais"
+                android:textColor="#800000"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="25dp"
+                android:id="@+id/labelDadosPessoais"
+                android:textAlignment="center"
+                android:layout_marginTop="1dp"></TextView>
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:inputType="textPersonName"
+                android:fontFamily="serif"
+                android:ems="10"
+                android:id="@+id/txtNome"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentEnd="true"
+                android:hint="Nome"
+                android:background="#FFFCEEEE"
+                android:layout_marginBottom="15dp"
+                android:textColor="#000000" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:inputType="number"
+                android:fontFamily="serif"
+                android:ems="10"
+                android:id="@+id/txtIdade"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="1dp"
+                android:layout_alignParentEnd="true"
+                android:hint="Idade"
+                android:background="#FFFCEEEE"
+                android:layout_marginBottom="15dp"
+                android:textColor="#000000" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Avançar"
+                android:id="@+id/btnAvancar"
+                android:layout_below="@+id/txfInformacoesAdd"
+                android:layout_marginTop="10dp"
+                android:background="#800000"
+                android:textColor="#ffffff"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:layout_alignEnd="@+id/txfInformacoesAdd"
+                android:layout_alignParentEnd="false" />
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutBotoes"
+                android:layout_gravity="center">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Passo 1/3"
+            android:id="@+id/passo"
+            android:textColor="#000000"
+            android:textSize="12dp"
+            android:layout_gravity="center"
+            android:paddingLeft="50dp"
+            android:textAlignment="viewEnd"
+            android:layout_weight="0.34"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true" />
+    </RelativeLayout>
+</ScrollView>
